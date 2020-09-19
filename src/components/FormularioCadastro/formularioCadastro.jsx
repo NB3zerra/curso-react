@@ -8,8 +8,9 @@ class FormularioCadastro extends Component {
         this.title = ""
     }
 
-    handleTitlesSet(event) {
+    handleTitleSet(event) {
         this.title = event.target.value
+        console.log(this.title);
     }
 
     render() {
@@ -19,7 +20,7 @@ class FormularioCadastro extends Component {
                     type="text"
                     placeholder="titulo"
                     className="form-cadastro_input"
-                    onChange={this.handleTitleSet}
+                    onChange={this.handleTitleSet.bind(this)}
                 />
                 <textarea
                     rows={15}
